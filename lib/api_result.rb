@@ -8,7 +8,7 @@ class APIResult
   attr_reader :query_word
   def initialize(word)
     @query_word = word
-    get_api_data(query_word)
+    get_api_data
     raise WordNotFoundError.new if missing_from_api?
     prune_entries
   end
@@ -39,12 +39,9 @@ class APIResult
 
 private
   attr_reader :data
-  def get_api_data(word)
-    api_key = Rails.application.credentials.dig(:dictionary_api_key)
-    api_url = "https://www.dictionaryapi.com/api/v3/references/collegiate/json/#{URI.encode(word)}?key=#{api_key}"
-    response = Net::HTTP.get_response(URI(api_url))
-    raise ApiQueryFailureError.new unless (response.is_a? Net::HTTPOK) && response.content_type == 'application/json'
-    @data = JSON.parse(response.body)
+  def get_api_data
+    raise ApiQueryFailureError.new unless valid_response?
+    @data = JSON.parse(api_response.body)
   end
 
   def prune_entries
@@ -57,4 +54,16 @@ private
     data.empty? || data[0].is_a?(String) || base_word.blank?
   end
 
+  def valid_response?
+    api_response.is_a?(Net::HTTPOK) && api_response.content_type == 'application/json'
+  end
+
+  def api_response
+    @api_response ||= Net::HTTP.get_response(URI(api_url))
+  end
+
+  def api_url
+    api_key = Rails.application.credentials.dig(:dictionary_api_key)
+    "https://www.dictionaryapi.com/api/v3/references/collegiate/json/#{URI.encode(query_word)}?key=#{api_key}"
+  end
 end
