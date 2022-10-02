@@ -9,7 +9,7 @@ describe APIResult do
   let(:api_response_content_type) { 'application/json' }
   let(:api_response_status) { 200 }
   before(:each) do
-    stub_request(:get, "https://www.dictionaryapi.com/api/v3/references/collegiate/json/#{search_word}?key=#{api_key}")
+    stub_request(:get, "https://www.dictionaryapi.com/api/v3/references/collegiate/json/#{search_word}?key=#{Rails.application.credentials.dig(:dictionary_api_key)}")
       .to_return(
         status: api_response_status,
         body: api_response_body,

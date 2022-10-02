@@ -36,7 +36,7 @@ RSpec.describe WordsController do
     let(:api_response_body) { file_fixture("api_response_#{name_param}.json.erb").read }
     let(:api_response_content_type) { 'application/json' }
     before {
-      stub_request(:get, "https://www.dictionaryapi.com/api/v3/references/collegiate/json/#{name_param}?key=cab72891-f003-43ef-a983-253666d45082")
+      stub_request(:get, "https://www.dictionaryapi.com/api/v3/references/collegiate/json/#{name_param}?key=#{Rails.application.credentials.dig(:dictionary_api_key)}")
         .to_return(
           status: 200,
           body: api_response_body,

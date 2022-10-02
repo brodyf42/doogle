@@ -51,7 +51,7 @@ RSpec.describe 'Application Homepage' do
 
     context 'when the dictionary API does not return word data' do
       before {
-        stub_request(:get, "https://www.dictionaryapi.com/api/v3/references/collegiate/json/#{search_word}?key=cab72891-f003-43ef-a983-253666d45082")
+        stub_request(:get, "https://www.dictionaryapi.com/api/v3/references/collegiate/json/#{search_word}?key=#{Rails.application.credentials.dig(:dictionary_api_key)}")
           .to_return(status: response_status, body: response_body, headers: { 'Content-Type' => 'application/json' })
       }
       context 'when the word is missing from the dictionary API' do

@@ -1,4 +1,5 @@
 require 'uri'
+require 'cgi/util'
 require 'net/http'
 
 class WordNotFoundError < StandardError; end
@@ -64,6 +65,6 @@ private
 
   def api_url
     api_key = Rails.application.credentials.dig(:dictionary_api_key)
-    "https://www.dictionaryapi.com/api/v3/references/collegiate/json/#{URI.encode(query_word)}?key=#{api_key}"
+    "https://www.dictionaryapi.com/api/v3/references/collegiate/json/#{CGI::escape(query_word)}?key=#{api_key}"
   end
 end

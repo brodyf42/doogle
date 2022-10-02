@@ -964,10 +964,10 @@
   resolved "https://registry.yarnpkg.com/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
   integrity sha512-5a6wqoJV/xEdbRNKVo6I4hO3VjyDq//8q2f9I6PBAvMesJHFauXDorcNCsr9RzvsZnaWi5NYCcfyqP1QeFHFbw==
 
-"@fortawesome/fontawesome-free@^5.15.4":
-  version "5.15.4"
-  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free/-/fontawesome-free-5.15.4.tgz#ecda5712b61ac852c760d8b3c79c96adca5554e5"
-  integrity sha512-eYm8vijH/hpzr/6/1CJ/V/Eb1xQFW2nnUKArb3z+yUWv7HTwj6M7SP957oMjfZjAHU6qpoNc2wQvIxBLWYa/Jg==
+"@fortawesome/fontawesome-free@^6.1.1":
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free/-/fontawesome-free-6.2.0.tgz#ba3510825b332816fe7190f28827f8cb33a298b5"
+  integrity sha512-CNR7qRIfCwWHNN7FnKUniva94edPdyQzil/zCwk3v6k4R6rR2Fr8i4s3PM7n/lyfPA6Zfko9z5WDzFxG9SW1uQ==
 
 "@gar/promisify@^1.0.1":
   version "1.1.2"
@@ -5672,13 +5672,13 @@ querystringify@^2.1.1:
   resolved "https://registry.yarnpkg.com/querystringify/-/querystringify-2.2.0.tgz#3345941b4153cb9d082d8eee4cda2016a9aef7f6"
   integrity sha512-FIqgj2EUvTa7R50u0rGsyTftzjYmv/a3hO345bZNrqabNqjtgiDMgmo4mkUjd+nzU5oF3dClKqFIPUKybUyqoQ==
 
-rails_admin@3.0.0-rc2:
-  version "3.0.0-rc2"
-  resolved "https://registry.yarnpkg.com/rails_admin/-/rails_admin-3.0.0-rc2.tgz#ac47eb8ddf9c2c742cef44ba13d4f020c3aee761"
-  integrity sha512-up2PBVFwMnCAb5BepSuTmKp6KEemKznltmsbrf0/D4dC8FL+EZhF7pmZrCbJWZNBZj0l360/iwbWMHXIStZNtQ==
+rails_admin@3.1.0-rc2:
+  version "3.1.0-rc2"
+  resolved "https://registry.yarnpkg.com/rails_admin/-/rails_admin-3.1.0-rc2.tgz#49b47209442ca676c6f996fb60dff09ea8f170b8"
+  integrity sha512-FCjQ4iorPwAiYnBwSlt+l8KWZco6XZCjR4C9oYob0sYgvgyVaVK6I5ChfrhW7HFUJEZwUSWEphRPBKhr5y7C3g==
   dependencies:
     "@babel/runtime" "^7.16.7"
-    "@fortawesome/fontawesome-free" "^5.15.4"
+    "@fortawesome/fontawesome-free" "^6.1.1"
     "@hotwired/turbo-rails" "^7.1.0"
     "@popperjs/core" "^2.11.0"
     "@rails/ujs" "^6.1.4-1"
