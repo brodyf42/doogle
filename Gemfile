@@ -7,7 +7,6 @@ gem 'puma'
 gem 'webpacker'
 gem 'turbolinks'
 gem 'bootsnap', require: false
-gem 'rails_admin'
 gem 'sqlite3'
 
 group :development do
