@@ -4,7 +4,6 @@ ruby '3.1.2'
 
 gem 'rails', '~> 7.0.4'
 gem 'puma'
-gem 'sass-rails'
 gem 'webpacker'
 gem 'turbolinks'
 gem 'bootsnap', require: false
