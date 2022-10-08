@@ -193,7 +193,7 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.4.3)
       loofah (~> 2.3)
-    rails_admin (3.1.0.rc2)
+    rails_admin (3.0.0)
       activemodel-serializers-xml (>= 1.0)
       kaminari (>= 0.14, < 2.0)
       nested_form (~> 0.3)
@@ -302,7 +302,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  bootsnap (>= 1.4.4)
+  bootsnap
   capistrano (~> 3.11)
   capistrano-passenger (~> 0.2.0)
   capistrano-rails (~> 1.4)
@@ -310,21 +310,21 @@ DEPENDENCIES
   capybara (>= 3.26)
   factory_bot_rails
   listen (~> 3.3)
-  puma (~> 5.0)
+  puma
   rails (~> 7.0.4)
   rails-controller-testing
-  rails_admin (>= 3.0.0.beta2, < 4)
+  rails_admin
   rspec-rails
-  sass-rails (>= 6)
+  sass-rails
   selenium-webdriver
   shoulda-matchers (~> 5.0)
   spring
-  sqlite3 (~> 1.4)
-  turbolinks (~> 5)
+  sqlite3
+  turbolinks
   web-console (>= 4.1.0)
   webdrivers
   webmock
-  webpacker (~> 5.0)
+  webpacker
 
 RUBY VERSION
    ruby 3.1.2p20
