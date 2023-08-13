@@ -11,7 +11,7 @@ class Word < ApplicationRecord
   def to_hash
     {
       name: name,
-      entries: entries.map {|entry| entry.to_hash }
+      entries: entries.map(&:to_hash)
     }
   end
 

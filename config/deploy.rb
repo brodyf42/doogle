@@ -44,6 +44,8 @@ if ENV['SKIP_ASSETS']
   Rake::Task['deploy:assets:precompile'].clear_actions
 end
 
+Rake::Task["deploy:assets:backup_manifest"].clear_actions
+
 before "deploy:assets:precompile", "deploy:yarn_install"
 namespace :deploy do
   desc "Run rake yarn install"
