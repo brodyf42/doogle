@@ -1,24 +1,3 @@
-# README
+# Doogle
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This is a small application that interfaces with a dictionalry API, persists definition data in a local database, and presents that to a user in a nicely formatted manner. It was created using Rails and React as a way to start building more familirity with those frameworks. 
